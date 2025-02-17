@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(197, 197, 197);
+    background-color: #764397;
     font-family: Georgia;
     display: flex;
     flex-direction: column;
@@ -10,8 +10,20 @@ body {
     color: white;
 }
 
+.poll-title-image {
+    display: block;
+    margin: 0 auto;
+    /* max-width and height are crucial here */
+    max-width: 5000px; /* Or whatever width you want */
+    max-height: 100px; /* Or whatever height you want */
+    width: auto;
+    height: auto;
+    /* object-fit is very important */
+    object-fit: contain; /* or cover, depending on how you want it to scale */
+}
+
 .poll-creation-container {
-    background-color: #333; /* Darker background for the form container */
+    background-color: #764397; /* Darker background for the form container */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
@@ -35,13 +47,13 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: #444; /* Darker input background */
-    color: white;
+    background-color: #ffffff; /* Darker input background */
+    color: rgb(0, 0, 0);
 }
 
 .poll-creation-container button {
     padding: 10px 15px;
-    background-color: #007bff; /* Blue button */
+    background-color: #ff5e0e; /* Blue button */
     color: white;
     border: none;
     border-radius: 4px;
@@ -49,7 +61,7 @@ body {
 }
 
 .poll-creation-container button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #ff5e0e; /* Darker blue on hover */
 }
 
 .option {
