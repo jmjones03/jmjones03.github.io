@@ -3,13 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poll Creation</title>
-    <link rel="stylesheet" href="votestyle.css">
+    <title>Poll Voting Page</title>
+    <style>
+        body {
+            background-color: purple;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .poll-container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        .submit-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img src="VOTEPOST.PNG" alt="Your Logo" class="logo">
-        <img src="groupname.png" alt="Bottom Logo" class="bottom-logo">
+    <h1>Vote in the Poll</h1>
+    <div class="poll-container">
+        <div class="question">What is your favorite color?</div>
+        <div class="options">
+            <label><input type="radio" name="color" value="red"> Red</label>
+            <label><input type="radio" name="color" value="blue"> Blue</label>
+            <label><input type="radio" name="color" value="green"> Green</label>
+            <label><input type="radio" name="color" value="yellow"> Yellow</label>
+        </div>
+        <button class="submit-btn">Submit Vote</button>
     </div>
-    <script src="votepage_script.js"></script> </body>
-    </html>
+</body>
+</html>

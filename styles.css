@@ -26,6 +26,40 @@ body {
     margin-bottom: 10px;
 }
 
+/* Create Poll Button (keeps existing orange color) */
+#createPollButton {
+    align-self: center;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff5e0e; /* Orange */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#createPollButton:hover {
+    background-color: #e65300; /* Darker orange on hover */
+}
+
+/* Go Button (custom color, e.g., blue) */
+#goButton {
+    align-self: center;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ffa1a1; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#goButton:hover {
+    background-color: #b16060; /* Darker blue on hover */
+}
+
 label {
     display: block;
     margin-bottom: 5px;
@@ -81,6 +115,30 @@ button {
 .input-group input[type="text"] {
     margin-right: 10px;
 }
+
+button {
+    align-self: center; /* Centers the button */
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff5e0e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Makes the button match input width */
+}
+
+button:hover {
+    background-color: #e65300; /* Slightly darker shade on hover */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers button */
+    margin-bottom: 10px; /* Adds spacing between input fields */
+}
+
 
 .bottom-logo {
     display: block;
