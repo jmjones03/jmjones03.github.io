@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM to load
 
     const addOptionButton = document.getElementById('addOption');
-    const removeOptionButton = document.getElementById('removeOption');
     const optionsContainer = document.getElementById('optionsContainer');
     let optionCounter = 2; // Start with 2 options (A and B)
     const maxOptions = 6; // Set the max limit of options
@@ -16,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM to loa
             newOptionDiv.innerHTML = `
                 <label for="option${String.fromCharCode(64 + optionCounter)}">${String.fromCharCode(64 + optionCounter)} -</label>
                 <input type="text" id="option${String.fromCharCode(64 + optionCounter)}" name="options[]" required>
+                <button class="remove-btn" data-id="${optionCounter}">❌</button>
             `;
             optionsContainer.appendChild(newOptionDiv);
         } else {
@@ -23,16 +23,17 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM to loa
         }
     });
 
-    // Remove option event listener
-    removeOptionButton.addEventListener('click', () => {
-        if (optionCounter > 2) { // Ensure at least 2 options remain
-            const lastOption = document.getElementById(`optionDiv${optionCounter}`);
-            if (lastOption) {
-                optionsContainer.removeChild(lastOption);
+    // Event delegation to handle dynamic delete buttons
+    optionsContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('remove-btn')) {
+            const optionId = event.target.getAttribute('data-id');
+            const optionDiv = document.getElementById(`optionDiv${optionId}`);
+            if (optionDiv && optionCounter > 2) { // Ensure at least 2 options remain
+                optionsContainer.removeChild(optionDiv);
                 optionCounter--;
+            } else {
+                alert("You must have at least two options!");
             }
-        } else {
-            alert("You must have at least two options!");
         }
     });
 
@@ -64,4 +65,5 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for the DOM to loa
             // Handle error (e.g., display error message)
         });
     });
+
 });

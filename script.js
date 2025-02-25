@@ -1,5 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
+    const createPollButton = document.getElementById('createPollButton');
     const goButton = document.getElementById('goButton');
     const classCodeInput = document.getElementById('classCode');
     
@@ -15,5 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Example redirect:
             // window.location.href = "next_page.html?classCode=" + classCode;
         }
+    });
+
+    createPollButton.addEventListener('click', function() {
+        alert("Redirects to poll creation");
+    
     });
 });

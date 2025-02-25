@@ -30,7 +30,7 @@ body {
 #createPollButton {
     align-self: center;
     margin-top: 10px;
-    padding: 10px 15px;
+    padding: 9px 15px;
     background-color: #ff5e0e; /* Orange */
     color: white;
     border: none;
@@ -47,17 +47,17 @@ body {
 #goButton {
     align-self: center;
     margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #ffa1a1; /* Blue */
+    padding: 5px 8 px;
+    background-color: #29b75f; 
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 25%;
 }
 
 #goButton:hover {
-    background-color: #b16060; /* Darker blue on hover */
+    background-color: #0c4f33; 
 }
 
 label {
@@ -99,7 +99,7 @@ input[type="text"] {
 button {
     align-self: flex-end; /*moves button to the right*/
     margin-top: 10px;
-    padding: 8px 15px;
+    padding: 10px 15px;
     background-color: #ff5e0e;
     color: white;
     border: none;
@@ -136,7 +136,7 @@ button:hover {
     display: flex;
     flex-direction: column; /* Stacks elements vertically */
     align-items: center; /* Centers button */
-    margin-bottom: 10px; /* Adds spacing between input fields */
+    margin-bottom: -10px; /* Adds spacing between input fields */
 }
 
 

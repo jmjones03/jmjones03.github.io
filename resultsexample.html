@@ -14,13 +14,16 @@ const barColors = [
   "pink"
 ];
 
+
+
 new Chart("myChart", {
-  type: "pie",
+  type: "doughnut",
   data: {
     labels: xValues,
     datasets: [{
       backgroundColor: barColors,
       data: yValues
+      
     }]
   },
   options: {
