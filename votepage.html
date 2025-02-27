@@ -4,50 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poll Voting Page</title>
-    <style>
-        body {
-            background-color: purple;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        .poll-container {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-            text-align: left;
-        }
-        .question {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .options label {
-            display: block;
-            margin: 5px 0;
-        }
-        .submit-btn {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
-    <h1>Vote in the Poll</h1>
+    <img src="votepost3.png" alt="Poll Header" class="header-image">
+    
     <div class="poll-container">
         <div class="question">What is your favorite color?</div>
         <div class="options">
-            <label><input type="radio" name="color" value="red"> Red</label>
-            <label><input type="radio" name="color" value="blue"> Blue</label>
-            <label><input type="radio" name="color" value="green"> Green</label>
-            <label><input type="radio" name="color" value="yellow"> Yellow</label>
+            <label><span class="option-label">A.</span> <input type="radio" name="color" value="red"> Red</label>
+            <label><span class="option-label">B.</span> <input type="radio" name="color" value="blue"> Blue</label>
+            <label><span class="option-label">C.</span> <input type="radio" name="color" value="green"> Green</label>
+            <label><span class="option-label">D.</span> <input type="radio" name="color" value="yellow"> Yellow</label>
+            <label><span class="option-label">E.</span> <input type="radio" name="color" value="pink"> Pink</label>
+            <label><span class="option-label">F.</span> <input type="radio" name="color" value="purple"> Purple</label>
         </div>
         <button class="submit-btn">Submit Vote</button>
     </div>
+
+    <script src="votepage_script.js"></script>
+    <img src="groupname.png" alt="company logo" class="bottom-image">
 </body>
 </html>

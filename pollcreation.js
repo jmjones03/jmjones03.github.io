@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const addOptionButton = document.getElementById('addOption');
     const optionsContainer = document.getElementById('optionsContainer');
-    let optionCounter = optionsContainer.querySelectorAll('.option').length; // Correct initialization
+    const addOptionButton = document.getElementById('addOption');
+    const pollForm = document.getElementById('pollForm');
     const maxOptions = 6;
+
+    // Initialize with two options (A and B)
+    let optionCounter = 2;
+    updateOptionLabels();
 
     function updateOptionLabels() {
         const optionDivs = optionsContainer.querySelectorAll('.option');
@@ -20,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const removeBtn = div.querySelector('.remove-btn');
             removeBtn.setAttribute('data-id', index + 1);
         });
-        optionCounter = optionDivs.length; // Correctly update counter
+        optionCounter = optionDivs.length;
     }
 
     addOptionButton.addEventListener('click', () => {
@@ -36,8 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
 
             optionsContainer.appendChild(newOptionDiv);
-            optionCounter++;
-            updateOptionLabels(); // Update labels after adding
+            updateOptionLabels();
         } else {
             alert(`You can only have up to ${maxOptions} options.`);
         }
@@ -48,14 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const optionDiv = event.target.closest('.option');
             if (optionDiv && optionCounter > 2) {
                 optionsContainer.removeChild(optionDiv);
-                updateOptionLabels(); // Update labels after removing
+                updateOptionLabels();
             } else {
                 alert("You must have at least two options!");
             }
         }
     });
 
-    document.getElementById('pollForm').addEventListener('submit', function(event) {
+    pollForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
         const premise = document.getElementById('pollPremise').value;
