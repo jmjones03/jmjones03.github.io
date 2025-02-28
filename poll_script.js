@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const addOptionButton = document.getElementById('addOption');
     const optionsContainer = document.getElementById('optionsContainer');
-    let optionCounter = optionsContainer.querySelectorAll('.option').length; // Correct initialization
+    
     const maxOptions = 6;
+    const pollForm = document.getElementById('polllForm');
+
+    let optionCounter = 2;
+    updateOptionLabels();
 
     function updateOptionLabels() {
         const optionDivs = optionsContainer.querySelectorAll('.option');

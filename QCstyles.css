@@ -7,9 +7,15 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
+.image-caption {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
 .poll-title-image {
     display: block;
     margin: 0 auto;
@@ -42,7 +48,7 @@ body {
     width: calc(100% - 10px); 
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     box-sizing: border-box;
     background-color: #ffffff; 
@@ -59,9 +65,28 @@ body {
 }
 
 .poll-creation-container button:hover {
-    background-color: #ff8fa7; 
+    background-color: #ffba7a; 
 }
 
+.remove-btn{
+    background-color: rgb(118, 67, 151);
+}
+.remove-btn:hover{
+    background-color: rgb(76, 34, 105);
+}
+button {
+    background-color: #ff5e0e; /* Orange */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #9b2c00; /* Darker orange on hover */
+}
 .option {
     margin-bottom: 10px; /* Space between options */
 }

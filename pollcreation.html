@@ -3,10 +3,14 @@
 <head>
     <title>Poll Creator</title>
     <link rel="stylesheet" href="QCstyles.css">
+    
 </head>
 <body>
+    
+    <img src="votepost3.png" alt="group logo" class="poll-title-image">
+    <p class="image-caption">ABCD1234</p>
     <form id="pollForm">
-        <label for="pollPremise">Poll Question:</label>
+        <label for="pollPremise">Question:</label>
         <input type="text" id="pollPremise" required><br><br>
 
         <div id="optionsContainer">
@@ -22,7 +26,7 @@
             </div>
         </div>
 
-        <button type="button" id="addOption">Add Option</button><br><br>
+        <button type="button" id="addOption">+</button><br><br>
         <button type="submit">Create Poll</button>
     </form>
 
